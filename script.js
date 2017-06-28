@@ -88,4 +88,12 @@ let y = 3
 // nie możemy tak zrobić, bo let i const nie ma hoistingu
 }
 
-showVar()
+showVar();
+
+// jest istotna różnica tu:
+// for(var i = 1; i <= 3; i++) {
+for(let i = 1; i <= 3; i++) {
+	console.log('sss'+i);
+  document.getElementById('my-element' + i)
+    .addEventListener('click', function() { alert(i) })
+}

@@ -94,3 +94,16 @@ function showVar() {
 }
 
 showVar();
+
+// for(var i = 1; i <= 3; i++) {
+
+var _loop = function _loop(i) {
+	console.log('sss' + i);
+	document.getElementById('my-element' + i).addEventListener('click', function () {
+		alert(i);
+	});
+};
+
+for (var i = 1; i <= 3; i++) {
+	_loop(i);
+}
