@@ -65,3 +65,32 @@ if (y == 1) {
 }
 
 showScore();
+
+// stałe
+
+// Tak jak let działa w obrębie bloku
+var env = 'DEV';
+{
+	var _env = 'PROD';
+	console.log(_env);
+}
+console.log(env);
+
+// obiektu nie można zmienić ale można zmienić jego właściwości
+var config = {};
+config.env = 'PROD';
+config.env = 'DEV';
+console.log(config.env);
+
+// Kolejność deklaracji
+
+function showVar() {
+	var x = 2;
+	console.log(x);
+
+	console.log(y); //undefined
+	var y = 3;
+	// nie możemy tak zrobić, bo let i const nie ma hoistingu
+}
+
+showVar();
