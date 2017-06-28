@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // babel - transpilacja
 
@@ -21,3 +21,47 @@ var arr = [1, 2, 3, 4];
 // metoda - sprawdza czy ciąg znaków jest w zmiennej name
 console.log(name.includes('main'));
 console.log(arr.includes(1));
+
+// nowe stałe i zmiennej
+
+function showTotal() {
+	var totalAmount = 4000;
+	if (totalAmount > 3000) {
+		var newTotalAmount = totalAmount - totalAmount * 0.1;
+		console.log(newTotalAmount);
+	}
+
+	for (var i = 0; i <= 5; i++) {
+		document.write(i);
+	}
+	console.log(totalAmount);
+}
+
+showTotal();
+
+function showScore() {
+
+	var score = 10;
+	var x = 1;
+	if (x == 1) {
+		console.log('score w function przed redeklaracją ' + _score);
+		var _score = 30;
+		console.log('score po' + _score);
+	}
+
+	console.log(score);
+}
+
+var score2 = 25;
+var score3 = 14;
+var y = 1;
+if (y == 1) {
+	console.log('score2 bez function przed redeklaracją ' + score2);
+	console.log('score3 bez function przed redeklaracją ' + _score2);
+	score2 = 35;
+	var _score2 = 40;
+	console.log('score2 po' + score2);
+	console.log('score3 po' + _score2);
+}
+
+showScore();
