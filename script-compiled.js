@@ -181,3 +181,16 @@ var im = person2.imie,
 
 console.log(imie, wiek, miasto);
 console.log(im, wi, mi);
+
+// parametry funkcji
+
+function multiplyValues() {
+	var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
+	var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3 * a;
+
+	return "multiplyValues " + a + "*" + b + " " + a * b;
+}
+
+console.log(multiplyValues(4, 5));
+console.log(multiplyValues(3));
+console.log(multiplyValues());

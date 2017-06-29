@@ -159,3 +159,13 @@ let {imie, wiek, miasto} = person1;
 let {imie: im, wiek: wi = 30, miasto: mi = "Łódź"} = person2;
 console.log(imie, wiek, miasto);
 console.log(im, wi, mi);
+
+// parametry funkcji
+
+function multiplyValues(a = 2, b = 3 * a) {
+	return "multiplyValues " + a + "*" + b + " " + a * b;
+}
+
+console.log(multiplyValues(4, 5));
+console.log(multiplyValues(3));
+console.log(multiplyValues());
