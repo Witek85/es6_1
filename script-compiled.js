@@ -31,8 +31,8 @@ function showTotal() {
 		console.log(newTotalAmount);
 	}
 
-	for (var i = 0; i <= 5; i++) {
-		document.write(i);
+	for (var _i = 0; _i <= 5; _i++) {
+		document.write(_i);
 	}
 	console.log(totalAmount);
 }
@@ -98,15 +98,15 @@ showVar();
 // jest istotna różnica tu:
 // for(var i = 1; i <= 3; i++) {
 
-var _loop = function _loop(i) {
-	console.log('sss' + i);
-	document.getElementById('my-element' + i).addEventListener('click', function () {
-		alert(i);
+var _loop = function _loop(_i2) {
+	console.log('sss' + _i2);
+	document.getElementById('my-element' + _i2).addEventListener('click', function () {
+		alert(_i2);
 	});
 };
 
-for (var i = 1; i <= 3; i++) {
-	_loop(i);
+for (var _i2 = 1; _i2 <= 3; _i2++) {
+	_loop(_i2);
 }
 
 // string
@@ -127,3 +127,37 @@ function createMarkup() {
 console.log(giftcard.description);
 
 document.querySelector('.element1').innerHTML = createMarkup();
+
+// destructuring tablice
+
+var numbers = [1, 2, 3, "four", "five"];
+var a = numbers[0],
+    b = numbers[1],
+    e = numbers[4];
+
+console.log(a, b, e);
+
+// destructuring obiekty
+
+var person1 = {
+	imie: 'Piotrek',
+	wiek: 29,
+	miasto: 'Sosnowiec'
+};
+
+var person2 = {
+	imie: 'Stefan',
+	wiek: 54
+};
+
+var imie = person1.imie,
+    wiek = person1.wiek,
+    miasto = person1.miasto;
+var i = person2.imie,
+    _person2$wiek = person2.wiek,
+    w = _person2$wiek === undefined ? 30 : _person2$wiek,
+    _person2$miasto = person2.miasto,
+    m = _person2$miasto === undefined ? "Łódź" : _person2$miasto;
+
+console.log(imie, wiek, miasto);
+console.log(i, w, m);

@@ -126,3 +126,27 @@ return `
 console.log(giftcard.description);
 
 document.querySelector('.element1').innerHTML = createMarkup();
+
+// destructuring tablice
+
+let numbers = [1,2,3,"four","five"];
+let [a,b,,,e] = numbers;
+console.log(a,b,e);
+
+// destructuring obiekty
+
+let person1 = {
+	imie: 'Piotrek',
+	wiek: 29,
+	miasto: 'Sosnowiec'
+}
+
+let person2 = {
+	imie: 'Stefan',
+	wiek: 54
+}
+
+let {imie, wiek, miasto} = person1;
+let {imie: i, wiek: w = 30, miasto: m = "Łódź"} = person2;
+console.log(imie, wiek, miasto);
+console.log(i, w, m);
