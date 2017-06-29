@@ -39,7 +39,7 @@ function showScore() {
 let score = 10;
 let x = 1;
 if (x == 1) {
-console.log('score w function przed redeklaracją ' + score);
+// console.log('score w function przed redeklaracją ' + score);
 let score = 30;
 console.log('score po'+score);
 }
@@ -53,7 +53,7 @@ let score3 = 14;
 let y = 1;
 if (y == 1) {
 console.log('score2 bez function przed redeklaracją ' + score2);
-console.log('score3 bez function przed redeklaracją ' + score3);
+// console.log('score3 bez function przed redeklaracją ' + score3);
 score2 = 35;
 let score3 = 40;
 console.log('score2 po' + score2);
@@ -83,7 +83,7 @@ function showVar() {
 var x = 2;
 console.log(x);
 
-console.log(y); //undefined
+// console.log(y); //undefined
 let y = 3
 // nie możemy tak zrobić, bo let i const nie ma hoistingu
 }
@@ -97,3 +97,32 @@ for(let i = 1; i <= 3; i++) {
   document.getElementById('my-element' + i)
     .addEventListener('click', function() { alert(i) })
 }
+
+// string
+
+let giftcard = {
+'id': 'sk001',
+'name': 'Karta Podarunkowa',
+'price': 350,
+'class': 'gift',
+'description': `Lorem ipsum dolor sit amet enim. 
+Etiam ullamcorper. Suspendisse a 
+pellentesque dui, non felis. 
+Maecenas malesuada elit lectus felis, 
+malesuada ultricies. Curabitur et ligula.`
+
+}
+
+function createMarkup() {
+return `
+<div class="product ${giftcard.class}">
+<h2>${giftcard.id} - ${giftcard.name}</h2>
+<span>${giftcard.price}</span>
+<p>${giftcard.description}</p>
+</div>
+`
+}
+
+console.log(giftcard.description);
+
+document.querySelector('.element1').innerHTML = createMarkup();

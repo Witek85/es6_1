@@ -44,7 +44,7 @@ function showScore() {
 	var score = 10;
 	var x = 1;
 	if (x == 1) {
-		console.log('score w function przed redeklaracją ' + _score);
+		// console.log('score w function przed redeklaracją ' + score);
 		var _score = 30;
 		console.log('score po' + _score);
 	}
@@ -57,7 +57,7 @@ var score3 = 14;
 var y = 1;
 if (y == 1) {
 	console.log('score2 bez function przed redeklaracją ' + score2);
-	console.log('score3 bez function przed redeklaracją ' + _score2);
+	// console.log('score3 bez function przed redeklaracją ' + score3);
 	score2 = 35;
 	var _score2 = 40;
 	console.log('score2 po' + score2);
@@ -88,13 +88,14 @@ function showVar() {
 	var x = 2;
 	console.log(x);
 
-	console.log(y); //undefined
+	// console.log(y); //undefined
 	var y = 3;
 	// nie możemy tak zrobić, bo let i const nie ma hoistingu
 }
 
 showVar();
 
+// jest istotna różnica tu:
 // for(var i = 1; i <= 3; i++) {
 
 var _loop = function _loop(i) {
@@ -107,3 +108,22 @@ var _loop = function _loop(i) {
 for (var i = 1; i <= 3; i++) {
 	_loop(i);
 }
+
+// string
+
+var giftcard = {
+	'id': 'sk001',
+	'name': 'Karta Podarunkowa',
+	'price': 350,
+	'class': 'gift',
+	'description': 'Lorem ipsum dolor sit amet enim. \nEtiam ullamcorper. Suspendisse a \npellentesque dui, non felis. \nMaecenas malesuada elit lectus felis, \nmalesuada ultricies. Curabitur et ligula.'
+
+};
+
+function createMarkup() {
+	return '\n<div class="product ' + giftcard.class + '">\n<h2>' + giftcard.id + ' - ' + giftcard.name + '</h2>\n<span>' + giftcard.price + '</span>\n<p>' + giftcard.description + '</p>\n</div>\n';
+}
+
+console.log(giftcard.description);
+
+document.querySelector('.element1').innerHTML = createMarkup();
