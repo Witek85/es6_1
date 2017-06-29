@@ -1,5 +1,7 @@
 'use strict';
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 // babel - transpilacja
 
 function sumTwoNumbers() {
@@ -130,12 +132,30 @@ document.querySelector('.element1').innerHTML = createMarkup();
 
 // destructuring tablice
 
-var numbers = [1, 2, 3, "four", "five"];
-var a = numbers[0],
-    b = numbers[1],
-    e = numbers[4];
+var numbers1 = [1, 2, 3, "four", "five"];
+var a = numbers1[0],
+    b = numbers1[1],
+    e = numbers1[4],
+    _numbers1$ = numbers1[5],
+    f = _numbers1$ === undefined ? 999 : _numbers1$;
 
-console.log(a, b, e);
+console.log(a, b, e, f);
+
+// destructuring funkcje
+
+function getArray() {
+	return [1, 2, 3, "four", "five"];
+}
+
+var _getArray = getArray(),
+    _getArray2 = _slicedToArray(_getArray, 6),
+    g = _getArray2[2],
+    h = _getArray2[3],
+    i = _getArray2[4],
+    _getArray2$ = _getArray2[5],
+    j = _getArray2$ === undefined ? 999 : _getArray2$;
+
+console.log(g, h, i, j);
 
 // destructuring obiekty
 
@@ -153,11 +173,11 @@ var person2 = {
 var imie = person1.imie,
     wiek = person1.wiek,
     miasto = person1.miasto;
-var i = person2.imie,
+var im = person2.imie,
     _person2$wiek = person2.wiek,
-    w = _person2$wiek === undefined ? 30 : _person2$wiek,
+    wi = _person2$wiek === undefined ? 30 : _person2$wiek,
     _person2$miasto = person2.miasto,
-    m = _person2$miasto === undefined ? "Łódź" : _person2$miasto;
+    mi = _person2$miasto === undefined ? "Łódź" : _person2$miasto;
 
 console.log(imie, wiek, miasto);
-console.log(i, w, m);
+console.log(im, wi, mi);

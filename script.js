@@ -129,9 +129,18 @@ document.querySelector('.element1').innerHTML = createMarkup();
 
 // destructuring tablice
 
-let numbers = [1,2,3,"four","five"];
-let [a,b,,,e] = numbers;
-console.log(a,b,e);
+let numbers1 = [1,2,3,"four","five"];
+let [a,b,,,e, f = 999] = numbers1;
+console.log(a,b,e,f);
+
+// destructuring funkcje
+
+function getArray() {
+	return [1,2,3,"four","five"];
+}
+
+let [,,g,h,i, j = 999] = getArray();
+console.log(g,h,i,j);
 
 // destructuring obiekty
 
@@ -147,6 +156,6 @@ let person2 = {
 }
 
 let {imie, wiek, miasto} = person1;
-let {imie: i, wiek: w = 30, miasto: m = "Łódź"} = person2;
+let {imie: im, wiek: wi = 30, miasto: mi = "Łódź"} = person2;
 console.log(imie, wiek, miasto);
-console.log(i, w, m);
+console.log(im, wi, mi);
