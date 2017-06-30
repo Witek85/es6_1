@@ -1,5 +1,7 @@
 'use strict';
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 // babel - transpilacja
@@ -207,6 +209,29 @@ function getValues(a) {
 	// zrobić sort cyfrowe
 }
 
-var restVal = getValues('argumenty', 'aaa', 'hhhh', 'lorem', 'ipsum', 'dolor');
+function getValues2() {
+	for (var _len2 = arguments.length, Args2 = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+		Args2[_key2] = arguments[_key2];
+	}
 
-console.log(restVal);
+	var values = Args2.sort();
+	return values;
+	// zrobić sort cyfrowe
+}
+
+function getValuesArray(arr) {
+	var values = arr.sort(function (a, b) {
+		return a - b;
+	});
+	return values;
+}
+
+var arra = [4, 7, 4, 2, 5, 7, 8, 9, 1];
+console.log(typeof arra === 'undefined' ? 'undefined' : _typeof(arra), arra.constructor, arra);
+var restVal = getValues('argumenty', 'aaa', 'hhhh', 'lorem', 'ipsum', 'dolor');
+var restVal2 = getValues2(4, 7, 4, 2, 5, 7, 8, 9, 1);
+var restVal3 = getValuesArray(arra);
+
+console.log(typeof restVal === 'undefined' ? 'undefined' : _typeof(restVal), restVal.constructor, restVal);
+console.log(typeof restVal2 === 'undefined' ? 'undefined' : _typeof(restVal2), restVal2.constructor, restVal2);
+console.log(typeof restVal3 === 'undefined' ? 'undefined' : _typeof(restVal3), restVal3.constructor, restVal3);

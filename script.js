@@ -178,6 +178,25 @@ return values;
 // zrobić sort cyfrowe
 }
 
-var restVal = getValues('argumenty', 'aaa','hhhh','lorem','ipsum','dolor');
+function getValues2(...Args2) {
+var values = Args2.sort();
+return values;
+// zrobić sort cyfrowe
+}
 
-console.log(restVal);
+function getValuesArray(arr) {
+	var values = arr.sort(function(a,b){
+		return a - b;
+	});
+	return values;
+}
+
+var arra = [4,7,4,2,5,7,8,9,1];
+console.log(typeof(arra),arra.constructor, arra);
+var restVal = getValues('argumenty', 'aaa','hhhh','lorem','ipsum','dolor');
+var restVal2 = getValues2(4,7,4,2,5,7,8,9,1);
+var restVal3 = getValuesArray(arra);
+
+console.log(typeof(restVal),restVal.constructor,restVal);
+console.log(typeof(restVal2),restVal2.constructor,restVal2);
+console.log(typeof(restVal3),restVal3.constructor,restVal3);
