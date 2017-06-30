@@ -250,3 +250,12 @@ var sum2 = sumValues.apply(undefined, spread_values);
 console.log("sumApply ", sumApply);
 console.log("sumCall ", sumCall);
 console.log("sum2 ", sum2);
+
+var arr11 = [10, 20, 30, 35];
+var arr22 = [40, 50, 60, 65];
+
+// var sum3 = arr11.push(arr22); // źle
+arr11.push.apply(arr11, arr22); // es6 ok
+
+// console.log("sum3 ", sum3);
+console.log("arr11 ", arr11);
