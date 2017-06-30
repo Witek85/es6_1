@@ -175,13 +175,11 @@ console.log(multiplyValues());
 function getValues(a, ...Args) {
 var values = Args.sort();
 return values;
-// zrobić sort cyfrowe
 }
 
 function getValues2(...Args2) {
 var values = Args2.sort();
 return values;
-// zrobić sort cyfrowe
 }
 
 function getValuesArray(arr) {
@@ -200,3 +198,20 @@ var restVal3 = getValuesArray(arra);
 console.log(typeof(restVal),restVal.constructor,restVal);
 console.log(typeof(restVal2),restVal2.constructor,restVal2);
 console.log(typeof(restVal3),restVal3.constructor,restVal3);
+
+// operator spread
+
+function sumValues(a,b,c) {
+return a + b + c;
+}
+
+var spread_values = [1,2,3];
+var sumApply = sumValues.apply(null, spread_values); // null to value for this
+var sumCall = sumValues.call(null, spread_values);
+
+// es6 way
+var sum2 = sumValues(...spread_values);
+
+console.log("sumApply ", sumApply);
+console.log("sumCall ", sumCall);
+console.log("sum2 ", sum2);
