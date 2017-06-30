@@ -169,3 +169,15 @@ function multiplyValues(a = 2, b = 3 * a) {
 console.log(multiplyValues(4, 5));
 console.log(multiplyValues(3));
 console.log(multiplyValues());
+
+// operator rest
+
+function getValues(a, ...Args) {
+var values = Args.sort();
+return values;
+// zrobić sort cyfrowe
+}
+
+var restVal = getValues('argumenty', 'aaa','hhhh','lorem','ipsum','dolor');
+
+console.log(restVal);

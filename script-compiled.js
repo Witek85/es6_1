@@ -194,3 +194,19 @@ function multiplyValues() {
 console.log(multiplyValues(4, 5));
 console.log(multiplyValues(3));
 console.log(multiplyValues());
+
+// operator rest
+
+function getValues(a) {
+	for (var _len = arguments.length, Args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+		Args[_key - 1] = arguments[_key];
+	}
+
+	var values = Args.sort();
+	return values;
+	// zrobić sort cyfrowe
+}
+
+var restVal = getValues('argumenty', 'aaa', 'hhhh', 'lorem', 'ipsum', 'dolor');
+
+console.log(restVal);
