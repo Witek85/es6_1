@@ -219,8 +219,28 @@ console.log("sum2 ", sum2);
 var arr11 = [10,20,30,35];
 var arr22 = [40,50,60,65];
 
-// var sum3 = arr11.push(arr22); // źle
+// arr11.push(arr22); // źle
 arr11.push(...arr22); // es6 ok
 
-// console.log("sum3 ", sum3);
 console.log("arr11 ", arr11);
+
+// destructuring parametry
+
+// dawnej
+function setOptionsOld(options) {
+const env = options.env;
+const db = options.db;
+// this.env i this.db nie zadziala - dlaczego
+return [env, db]
+}
+
+// es6
+function setOptionsES6({env, db, def = 'Default'}) {
+return [env, db, def]
+}
+
+let opt = setOptionsOld({env: 'DEV', db: 'SQL'})
+let opt2 = setOptionsES6({env: 'PROD', db: 'SQL'})
+
+console.log('opt', opt);
+console.log('opt2', opt2);
