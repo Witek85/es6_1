@@ -244,3 +244,19 @@ let opt2 = setOptionsES6({env: 'PROD', db: 'SQL'})
 
 console.log('opt', opt);
 console.log('opt2', opt2);
+
+// arrow functions
+
+var sumValuesNoArrow = function(a,b) {
+return a + b;
+}
+
+var sumValuesArrow = (a,b) => {
+return a + b;
+}
+
+var sumValuesArrow2 = (a,b) => a + b;
+
+console.log(sumValuesNoArrow(2,6));
+console.log(sumValuesArrow(2,6));
+console.log(sumValuesArrow2(2,6));
