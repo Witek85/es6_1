@@ -279,3 +279,35 @@ console.log(sumReduce);
 let sumReduce2 = arrReduce.reduce((a,b) => a + b);
 
 console.log(sumReduce2);
+
+// arrow functions this
+
+
+// this w funkcji
+
+function Counter() {
+// tu chyba chodzi o self, albo o bindowanie this
+// var self = this;
+// albo bind this po ,}
+var self = this;
+self.count = 1;
+setTimeout(function(){
+self.count++;
+console.log(self.count);
+}, 300)
+}
+
+// w strzałce jest prawidłowy kontekst this
+// nie tworzy nowego kontekstu this tylko używa takiego samego jak
+// otaczający kod
+
+function CounterES6() {
+this.count = 4;
+setTimeout(() => {
+this.count++;
+console.log(this.count);
+}, 500)
+}
+
+var c = new Counter();
+var c = new CounterES6();
