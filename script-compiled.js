@@ -302,3 +302,24 @@ var sumValuesArrow2 = function sumValuesArrow2(a, b) {
 console.log(sumValuesNoArrow(2, 6));
 console.log(sumValuesArrow(2, 6));
 console.log(sumValuesArrow2(2, 6));
+
+// arrow functions w metodzie
+
+var arrReduce = [1, 2, 3];
+
+// gotowa metoda reduce
+// najpierw dodajemy 2 pierwsze, potem kolejną, potem kolejną itp.
+// sumujemy rosnące wartości
+
+var sumReduce = arrReduce.reduce(function (a, b) {
+	return a + b;
+});
+
+console.log(arrReduce);
+console.log(sumReduce);
+
+var sumReduce2 = arrReduce.reduce(function (a, b) {
+	return a + b;
+});
+
+console.log(sumReduce2);

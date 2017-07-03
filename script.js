@@ -260,3 +260,22 @@ var sumValuesArrow2 = (a,b) => a + b;
 console.log(sumValuesNoArrow(2,6));
 console.log(sumValuesArrow(2,6));
 console.log(sumValuesArrow2(2,6));
+
+// arrow functions w metodzie
+
+let arrReduce = [1,2,3];
+
+// gotowa metoda reduce
+// najpierw dodajemy 2 pierwsze, potem kolejną, potem kolejną itp.
+// sumujemy rosnące wartości
+
+let sumReduce = arrReduce.reduce(function(a,b) {
+return a + b;
+});
+
+console.log(arrReduce);
+console.log(sumReduce);
+
+let sumReduce2 = arrReduce.reduce((a,b) => a + b);
+
+console.log(sumReduce2);
