@@ -310,4 +310,19 @@ console.log(this.count);
 }
 
 var c = new Counter();
-var c = new CounterES6();
+var d = new CounterES6();
+
+// jeszcze arrow functions
+
+let product = {
+id: 290,
+showId: function() {
+return this.id;
+},
+showId2: () => this.id // undefined
+// arrow nie nadaje się do użycia jako metody
+// m.in uwagi na kontekst this
+}
+
+console.log(product.showId());
+console.log(product.showId2());

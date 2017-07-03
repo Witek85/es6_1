@@ -356,4 +356,21 @@ function CounterES6() {
 }
 
 var c = new Counter();
-var c = new CounterES6();
+var d = new CounterES6();
+
+// jeszcze arrow functions
+
+var product = {
+	id: 290,
+	showId: function showId() {
+		return this.id;
+	},
+	showId2: function showId2() {
+		return undefined.id;
+	} // undefined
+	// arrow nie nadaje się do użycia jako metody
+	// m.in uwagi na kontekst this
+};
+
+console.log(product.showId());
+console.log(product.showId2());
