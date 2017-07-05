@@ -325,4 +325,24 @@ showId2: () => this.id // undefined
 }
 
 console.log(product.showId());
-console.log(product.showId2());
+// console.log(product.showId2()); // zwraca undefined
+
+// iteracja
+
+var cities = ["Warszawa", "Kraków", "Wrocław", "Poznań"];
+
+for (let key in cities) {
+	console.log(key + " " + cities[key]);
+}
+
+// es6 way
+
+for (let val of cities) {
+	console.log(val);
+}
+
+var city = "Warszawa";
+
+for (let letter of city) {
+	console.log(letter);
+}
