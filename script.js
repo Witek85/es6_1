@@ -368,3 +368,18 @@ let warsaw = mapa.get(1);
 console.log(warsaw);
 
 // todo zrobić map z innymi danymi
+
+// obiekt set
+
+let something = new Set();
+
+something.add(10);
+something.add(20);
+something.add("Hello");
+something.add(true);
+
+console.log(something);
+
+for (let sthItem of something) {
+	console.log(sthItem);
+}

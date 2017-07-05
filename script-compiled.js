@@ -477,3 +477,41 @@ console.log(mapa.size);
 
 var warsaw = mapa.get(1);
 console.log(warsaw);
+
+// todo zrobić map z innymi danymi
+
+// obiekt set
+
+var something = new Set();
+
+something.add(10);
+something.add(20);
+something.add("Hello");
+something.add(true);
+
+console.log(something);
+
+var _iteratorNormalCompletion4 = true;
+var _didIteratorError4 = false;
+var _iteratorError4 = undefined;
+
+try {
+	for (var _iterator4 = something[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+		var sthItem = _step4.value;
+
+		console.log(sthItem);
+	}
+} catch (err) {
+	_didIteratorError4 = true;
+	_iteratorError4 = err;
+} finally {
+	try {
+		if (!_iteratorNormalCompletion4 && _iterator4.return) {
+			_iterator4.return();
+		}
+	} finally {
+		if (_didIteratorError4) {
+			throw _iteratorError4;
+		}
+	}
+}
