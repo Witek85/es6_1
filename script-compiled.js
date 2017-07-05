@@ -422,6 +422,8 @@ try {
 
 		console.log(letter);
 	}
+
+	// obiekt map
 } catch (err) {
 	_didIteratorError2 = true;
 	_iteratorError2 = err;
@@ -436,3 +438,42 @@ try {
 		}
 	}
 }
+
+var mapa = new Map();
+
+mapa.set(1, "Warszawa");
+mapa.set(2, "Kraków");
+mapa.set(3, "Wrocław");
+mapa.set(4, "Poznań");
+
+console.log(mapa);
+
+var _iteratorNormalCompletion3 = true;
+var _didIteratorError3 = false;
+var _iteratorError3 = undefined;
+
+try {
+	for (var _iterator3 = mapa[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+		var _city = _step3.value;
+
+		console.log(_city);
+	}
+} catch (err) {
+	_didIteratorError3 = true;
+	_iteratorError3 = err;
+} finally {
+	try {
+		if (!_iteratorNormalCompletion3 && _iterator3.return) {
+			_iterator3.return();
+		}
+	} finally {
+		if (_didIteratorError3) {
+			throw _iteratorError3;
+		}
+	}
+}
+
+console.log(mapa.size);
+
+var warsaw = mapa.get(1);
+console.log(warsaw);

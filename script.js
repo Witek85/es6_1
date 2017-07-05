@@ -346,3 +346,25 @@ var city = "Warszawa";
 for (let letter of city) {
 	console.log(letter);
 }
+
+// obiekt map
+
+var mapa = new Map();
+
+mapa.set(1, "Warszawa");
+mapa.set(2, "Kraków");
+mapa.set(3, "Wrocław");
+mapa.set(4, "Poznań");
+
+console.log(mapa);
+
+for (let city of mapa) {
+	console.log(city);
+}
+
+console.log(mapa.size);
+
+let warsaw = mapa.get(1);
+console.log(warsaw);
+
+// todo zrobić map z innymi danymi
