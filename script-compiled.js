@@ -4,6 +4,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
+var _marked = [carGenerator].map(regeneratorRuntime.mark);
+
 // babel - transpilacja
 
 function sumTwoNumbers() {
@@ -567,6 +569,47 @@ console.log(users.next().value);
 console.log(users.next().done);
 
 // generator
+
+function carGenerator() {
+	return regeneratorRuntime.wrap(function carGenerator$(_context) {
+		while (1) {
+			switch (_context.prev = _context.next) {
+				case 0:
+					_context.next = 2;
+					return "Audi";
+
+				case 2:
+					_context.next = 4;
+					return "Opel";
+
+				case 4:
+					_context.next = 6;
+					return "Skoda";
+
+				case 6:
+					_context.next = 8;
+					return 456;
+
+				case 8:
+					_context.next = 10;
+					return true;
+
+				case 10:
+				case 'end':
+					return _context.stop();
+			}
+		}
+	}, _marked[0], this);
+}
+
+var cars = carGenerator();
+console.log(cars);
+console.log(cars.next().value);
+console.log(cars.next().value);
+console.log(cars.next().value);
+console.log(cars.next().value);
+console.log(cars.next().value);
+console.log(cars.next().done);
 
 // weakmap
 

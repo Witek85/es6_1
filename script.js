@@ -415,6 +415,23 @@ window.onload = function() {
 
 	// generator
 
+	function *carGenerator() {
+	yield "Audi";
+	yield "Opel";
+	yield "Skoda";
+	yield 456;
+	yield true;
+}
+
+let cars = carGenerator();
+console.log(cars);
+console.log(cars.next().value);
+console.log(cars.next().value);
+console.log(cars.next().value);
+console.log(cars.next().value);
+console.log(cars.next().value);
+console.log(cars.next().done);
+
 	// weakmap
 
 	// weakset
