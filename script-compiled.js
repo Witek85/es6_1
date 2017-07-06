@@ -546,3 +546,28 @@ window.onload = function () {
 		}
 	}
 };
+
+// iterator
+
+function createIterator(arr) {
+	var nextIndex = 0;
+
+	return {
+		next: function next() {
+			return nextIndex < arr.length ? { value: arr[nextIndex++], done: false } : { done: true };
+		}
+	};
+}
+
+var users = createIterator(['Stefan', 'Jan', 'Andrzej']);
+
+console.log(users.next().value);
+console.log(users.next().value);
+console.log(users.next().value);
+console.log(users.next().done);
+
+// generator
+
+// weakmap
+
+// weakset

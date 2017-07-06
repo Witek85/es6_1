@@ -393,3 +393,28 @@ window.onload = function() {
 			p.className = 'blue';
 		}
 	}
+
+	// iterator
+
+	function createIterator(arr) {
+		let nextIndex = 0;
+
+		return {
+			next: function() {
+				return nextIndex < arr.length ? {value: arr[nextIndex++], done: false} : {done: true}
+			}
+		}
+	}
+
+	let users = createIterator(['Stefan', 'Jan', 'Andrzej'])
+
+	console.log(users.next().value);
+	console.log(users.next().value);
+	console.log(users.next().value);
+	console.log(users.next().done);
+
+	// generator
+
+	// weakmap
+
+	// weakset
