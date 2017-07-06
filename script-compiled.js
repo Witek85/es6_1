@@ -122,12 +122,12 @@ var giftcard = {
 	'name': 'Karta Podarunkowa',
 	'price': 350,
 	'class': 'gift',
-	'description': 'Lorem ipsum dolor sit amet enim. \nEtiam ullamcorper. Suspendisse a \npellentesque dui, non felis. \nMaecenas malesuada elit lectus felis, \nmalesuada ultricies. Curabitur et ligula.'
+	'description': 'Lorem ipsum dolor sit amet enim. \n\tEtiam ullamcorper. Suspendisse a \n\tpellentesque dui, non felis. \n\tMaecenas malesuada elit lectus felis, \n\tmalesuada ultricies. Curabitur et ligula.'
 
 };
 
 function createMarkup() {
-	return '\n<div class="product ' + giftcard.class + '">\n<h2>' + giftcard.id + ' - ' + giftcard.name + '</h2>\n<span>' + giftcard.price + '</span>\n<p>' + giftcard.description + '</p>\n</div>\n';
+	return '\n\t<div class="product ' + giftcard.class + '">\n\t<h2>' + giftcard.id + ' - ' + giftcard.name + '</h2>\n\t<span>' + giftcard.price + '</span>\n\t<p>' + giftcard.description + '</p>\n\t</div>\n\t';
 }
 
 console.log(giftcard.description);
@@ -612,5 +612,19 @@ console.log(cars.next().value);
 console.log(cars.next().done);
 
 // weakmap
+
+var m = new WeakMap();
+
+var obj1 = { id: 1 };
+var obj2 = { id: 2
+
+	// kluczem musi być obiekt;
+};m.set(obj1, "Audi");
+m.set(obj2, "BMW");
+
+console.log(m.get(obj1));
+// kasujemy referencję
+obj2 = null;
+console.log(m.get(obj2));
 
 // weakset

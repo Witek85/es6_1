@@ -20,25 +20,25 @@ console.log(arr.includes(1));
 // nowe stałe i zmiennej
 
 function showTotal() {
-var totalAmount = 4000
-if (totalAmount > 3000) {
-let newTotalAmount = totalAmount - totalAmount  * 0.1
-console.log(newTotalAmount);
-}
+	var totalAmount = 4000
+	if (totalAmount > 3000) {
+		let newTotalAmount = totalAmount - totalAmount  * 0.1
+		console.log(newTotalAmount);
+	}
 
-for (let i = 0; i <= 5; i++) {
-	document.write(i);
-}
-console.log(totalAmount );
+	for (let i = 0; i <= 5; i++) {
+		document.write(i);
+	}
+	console.log(totalAmount );
 }
 
 showTotal();
 
 function showScore() {
 
-let score = 10;
-let x = 1;
-if (x == 1) {
+	let score = 10;
+	let x = 1;
+	if (x == 1) {
 // console.log('score w function przed redeklaracją ' + score);
 let score = 30;
 console.log('score po'+score);
@@ -52,7 +52,7 @@ var score2 = 25;
 let score3 = 14;
 let y = 1;
 if (y == 1) {
-console.log('score2 bez function przed redeklaracją ' + score2);
+	console.log('score2 bez function przed redeklaracją ' + score2);
 // console.log('score3 bez function przed redeklaracją ' + score3);
 score2 = 35;
 let score3 = 40;
@@ -80,8 +80,8 @@ console.log(config.env)
 // Kolejność deklaracji
 
 function showVar() {
-var x = 2;
-console.log(x);
+	var x = 2;
+	console.log(x);
 
 // console.log(y); //undefined
 let y = 3
@@ -92,35 +92,35 @@ showVar();
 
 // jest istotna różnica tu:
 // for(var i = 1; i <= 3; i++) {
-for(let i = 1; i <= 3; i++) {
-	console.log('sss'+i);
-  document.getElementById('my-element' + i)
-    .addEventListener('click', function() { alert(i) })
-}
+	for(let i = 1; i <= 3; i++) {
+		console.log('sss'+i);
+		document.getElementById('my-element' + i)
+		.addEventListener('click', function() { alert(i) })
+	}
 
 // string
 
 let giftcard = {
-'id': 'sk001',
-'name': 'Karta Podarunkowa',
-'price': 350,
-'class': 'gift',
-'description': `Lorem ipsum dolor sit amet enim. 
-Etiam ullamcorper. Suspendisse a 
-pellentesque dui, non felis. 
-Maecenas malesuada elit lectus felis, 
-malesuada ultricies. Curabitur et ligula.`
+	'id': 'sk001',
+	'name': 'Karta Podarunkowa',
+	'price': 350,
+	'class': 'gift',
+	'description': `Lorem ipsum dolor sit amet enim. 
+	Etiam ullamcorper. Suspendisse a 
+	pellentesque dui, non felis. 
+	Maecenas malesuada elit lectus felis, 
+	malesuada ultricies. Curabitur et ligula.`
 
 }
 
 function createMarkup() {
-return `
-<div class="product ${giftcard.class}">
-<h2>${giftcard.id} - ${giftcard.name}</h2>
-<span>${giftcard.price}</span>
-<p>${giftcard.description}</p>
-</div>
-`
+	return `
+	<div class="product ${giftcard.class}">
+	<h2>${giftcard.id} - ${giftcard.name}</h2>
+	<span>${giftcard.price}</span>
+	<p>${giftcard.description}</p>
+	</div>
+	`
 }
 
 console.log(giftcard.description);
@@ -173,13 +173,13 @@ console.log(multiplyValues());
 // operator rest
 
 function getValues(a, ...Args) {
-var values = Args.sort();
-return values;
+	var values = Args.sort();
+	return values;
 }
 
 function getValues2(...Args2) {
-var values = Args2.sort();
-return values;
+	var values = Args2.sort();
+	return values;
 }
 
 function getValuesArray(arr) {
@@ -202,7 +202,7 @@ console.log(typeof(restVal3),restVal3.constructor,restVal3);
 // operator spread
 
 function sumValues(a,b,c) {
-return a + b + c;
+	return a + b + c;
 }
 
 var spread_values = [1,2,3];
@@ -228,15 +228,15 @@ console.log("arr11 ", arr11);
 
 // dawnej
 function setOptionsOld(options) {
-const env = options.env;
-const db = options.db;
+	const env = options.env;
+	const db = options.db;
 // this.env i this.db nie zadziala - dlaczego
 return [env, db]
 }
 
 // es6
 function setOptionsES6({env, db, def = 'Default'}) {
-return [env, db, def]
+	return [env, db, def]
 }
 
 let opt = setOptionsOld({env: 'DEV', db: 'SQL'})
@@ -248,11 +248,11 @@ console.log('opt2', opt2);
 // arrow functions
 
 var sumValuesNoArrow = function(a,b) {
-return a + b;
+	return a + b;
 }
 
 var sumValuesArrow = (a,b) => {
-return a + b;
+	return a + b;
 }
 
 var sumValuesArrow2 = (a,b) => a + b;
@@ -270,7 +270,7 @@ let arrReduce = [1,2,3];
 // sumujemy rosnące wartości
 
 let sumReduce = arrReduce.reduce(function(a,b) {
-return a + b;
+	return a + b;
 });
 
 console.log(arrReduce);
@@ -292,8 +292,8 @@ function Counter() {
 var self = this;
 self.count = 1;
 setTimeout(function(){
-self.count++;
-console.log(self.count);
+	self.count++;
+	console.log(self.count);
 }, 300)
 }
 
@@ -302,11 +302,11 @@ console.log(self.count);
 // otaczający kod
 
 function CounterES6() {
-this.count = 4;
-setTimeout(() => {
-this.count++;
-console.log(this.count);
-}, 500)
+	this.count = 4;
+	setTimeout(() => {
+		this.count++;
+		console.log(this.count);
+	}, 500)
 }
 
 var c = new Counter();
@@ -315,10 +315,10 @@ var d = new CounterES6();
 // jeszcze arrow functions
 
 let product = {
-id: 290,
-showId: function() {
-return this.id;
-},
+	id: 290,
+	showId: function() {
+		return this.id;
+	},
 showId2: () => this.id // undefined
 // arrow nie nadaje się do użycia jako metody
 // m.in uwagi na kontekst this
@@ -389,10 +389,10 @@ for (let sthItem of something) {
 window.onload = function() {
 	const pars = document.querySelectorAll("p");
 	console.log(pars);
-		for (const p of pars) {
-			p.className = 'blue';
-		}
+	for (const p of pars) {
+		p.className = 'blue';
 	}
+}
 
 	// iterator
 
@@ -416,22 +416,36 @@ window.onload = function() {
 	// generator
 
 	function *carGenerator() {
-	yield "Audi";
-	yield "Opel";
-	yield "Skoda";
-	yield 456;
-	yield true;
-}
+		yield "Audi";
+		yield "Opel";
+		yield "Skoda";
+		yield 456;
+		yield true;
+	}
 
-let cars = carGenerator();
-console.log(cars);
-console.log(cars.next().value);
-console.log(cars.next().value);
-console.log(cars.next().value);
-console.log(cars.next().value);
-console.log(cars.next().value);
-console.log(cars.next().done);
+	let cars = carGenerator();
+	console.log(cars);
+	console.log(cars.next().value);
+	console.log(cars.next().value);
+	console.log(cars.next().value);
+	console.log(cars.next().value);
+	console.log(cars.next().value);
+	console.log(cars.next().done);
 
 	// weakmap
+
+	let m = new WeakMap();
+
+	let obj1 = {id: 1}
+	let obj2 = {id: 2}
+
+	// kluczem musi być obiekt;
+	m.set(obj1,"Audi")
+	m.set(obj2,"BMW")
+
+	console.log(m.get(obj1));
+	// kasujemy referencję
+	obj2 = null
+	console.log(m.get(obj2));
 
 	// weakset
