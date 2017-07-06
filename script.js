@@ -449,3 +449,18 @@ window.onload = function() {
 	console.log(m.get(obj2));
 
 	// weakset
+
+	let s = new WeakSet();
+
+	let obj3 = {name: 'Andrzej'};
+	let obj4 = {name: 'Mirek'};
+	let obj5 = {name: 'Wojtek'};
+
+	s.add(obj3);
+	s.add(obj4);
+	s.add(obj5);
+
+	console.log(s);
+	console.log(s.delete(obj4));
+	console.log(s);
+	console.log(s.has(obj4));

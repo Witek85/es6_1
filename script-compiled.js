@@ -628,3 +628,18 @@ obj2 = null;
 console.log(m.get(obj2));
 
 // weakset
+
+var s = new WeakSet();
+
+var obj3 = { name: 'Andrzej' };
+var obj4 = { name: 'Mirek' };
+var obj5 = { name: 'Wojtek' };
+
+s.add(obj3);
+s.add(obj4);
+s.add(obj5);
+
+console.log(s);
+console.log(s.delete(obj4));
+console.log(s);
+console.log(s.has(obj4));
