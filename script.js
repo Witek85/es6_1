@@ -383,3 +383,13 @@ console.log(something);
 for (let sthItem of something) {
 	console.log(sthItem);
 }
+
+// nodelist
+
+window.onload = function() {
+	const pars = document.querySelectorAll("p");
+	console.log(pars);
+		for (const p of pars) {
+			p.className = 'blue';
+		}
+	}

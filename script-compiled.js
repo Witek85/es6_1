@@ -501,6 +501,8 @@ try {
 
 		console.log(sthItem);
 	}
+
+	// nodelist
 } catch (err) {
 	_didIteratorError4 = true;
 	_iteratorError4 = err;
@@ -515,3 +517,32 @@ try {
 		}
 	}
 }
+
+window.onload = function () {
+	var pars = document.querySelectorAll("p");
+	console.log(pars);
+	var _iteratorNormalCompletion5 = true;
+	var _didIteratorError5 = false;
+	var _iteratorError5 = undefined;
+
+	try {
+		for (var _iterator5 = pars[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+			var p = _step5.value;
+
+			p.className = 'blue';
+		}
+	} catch (err) {
+		_didIteratorError5 = true;
+		_iteratorError5 = err;
+	} finally {
+		try {
+			if (!_iteratorNormalCompletion5 && _iterator5.return) {
+				_iterator5.return();
+			}
+		} finally {
+			if (_didIteratorError5) {
+				throw _iteratorError5;
+			}
+		}
+	}
+};
